@@ -1,0 +1,18 @@
+﻿  GamePlay.cpp
+C:\Users\usuario\Documents\GitHub\tp_2_game\GamePlay.cpp(39,43): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\usuario\Documents\GitHub\tp_2_game\GamePlay.cpp(46,44): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\usuario\Documents\GitHub\tp_2_game\GamePlay.cpp(50,19): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\usuario\Documents\GitHub\tp_2_game\GamePlay.cpp(52,19): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\usuario\Documents\GitHub\tp_2_game\GamePlay.cpp(57,43): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+C:\Users\usuario\Documents\GitHub\tp_2_game\GamePlay.cpp(59,42): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+  main.cpp
+  Generando código...
+  juego_01.vcxproj -> C:\Users\usuario\Documents\GitHub\tp_2_game\x64\Debug\juego_01.exe
