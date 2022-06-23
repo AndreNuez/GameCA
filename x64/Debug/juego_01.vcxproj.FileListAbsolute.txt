@@ -1,5 +1,2 @@
-C:\Users\Gonzalo\Documents\GitHub\tp_2_Game\x64\Debug\juego_01.exe
-C:\Users\Gonzalo\Desktop\Projects\c++\tp_2_Game\x64\Debug\juego_01.exe
-C:\Users\Gonzalo\Desktop\Projects\c++\Carpinchos_attack\tp_2_Game\x64\Debug\juego_01.exe
-C:\Users\Gonzalo\Documents\GitHub\tp_2\x64\Debug\juego_01.exe
-C:\Users\usuario\Documents\GitHub\tp_2_game\x64\Debug\juego_01.exe
+C:\Users\Gonzalo\Desktop\Projects\GameCA-main\x64\Debug\juego_01.exe
+C:\Users\Gonzalo\Documents\GitHub\GameCA\x64\Debug\juego_01.exe

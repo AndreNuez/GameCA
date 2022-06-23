@@ -11,6 +11,7 @@ GamePlay::GamePlay()
 
     text_vida.setFont(font);
     game_over.setFont(font);
+
 }
 
 void GamePlay::update()
@@ -55,52 +56,40 @@ void GamePlay::aceleracion()
     }
 
     carpincho.setVelocity(sf::Vector2f(0, velocidad));
-
     camarada.setVelocity(sf::Vector2f(0, velocidad));
 
-}
-
-void GamePlay::respawn()
-{
-    
 }
 
 void GamePlay::juego()
 {
     if (tiempojugado > 0) {
-
         if (vidas > 0) {
-
-            if (timer > 0) {
-                timer--;
-            }
 
             if (repartidor.getInmunidad()) {
                 time_inmunidad++;
             }
-
             if (repartidor.getInmunidad() && time_inmunidad == 60 * 5) {
                 repartidor.setInmunidad(false);
             }
-
             if (repartidor.isCollision(carpincho)) {
                 carpincho.respawn();
                 if (!repartidor.getInmunidad()) {
                     vidas--;
                 }
             }
-
-            if (timer == 0 && repartidor.isCollision(camarada)) {
-                // Repartidor.GetInmunidad() - Agregar condicion de que si choco obstculos no pase nada.
+            if (repartidor.isCollision(camarada)) {
                 repartidor.setInmunidad(true);
                 time_inmunidad = 0;
-                timer = 60 * 5;
                 camarada.respawn();
                 points += 100;
             }
         }
-
+        repartidor.setTransparencia(repartidor.getInmunidad());
         tiempojugado--;
+    }
+    else {
+        game_over.setPosition(250, 300);
+        game_over.setString("GAME OVER");
     }
 }
 
@@ -112,6 +101,6 @@ void GamePlay::setTextos()
     text_vida.setPosition(602, 20);
     text_vida.setString("VIDAS: " + std::to_string(vidas));
 
-    game_over.setPosition(250, 300);
-    game_over.setString("GAME OVER");
+    //game_over.setPosition(250, 300);
+    //game_over.setString("GAME OVER");
 }

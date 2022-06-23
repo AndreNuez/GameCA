@@ -82,3 +82,13 @@ float Personaje::getAceleracion()
 {
     return _aceleracion;
 }
+
+void Personaje::setTransparencia(bool inmunidad)
+{
+    if (inmunidad) {
+        _sprite.setColor(sf::Color(255, 255, 255, 128));
+    }
+    else {
+        _sprite.setColor(sf::Color(255, 255, 255));
+    }
+}

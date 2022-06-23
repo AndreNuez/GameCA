@@ -19,6 +19,6 @@ public:
 	bool getInmunidad();
 	void setAceleracion(float aceleracion);
 	float getAceleracion();
-
+	void setTransparencia(bool);
 };
 

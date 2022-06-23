@@ -16,9 +16,9 @@ private:
 	sf::Text text, text_vida, game_over;
 
 	int vidas = 3;
-	int tiempojugado = 60*10;
+	int tiempojugado = 60*30;
 	int points = 0;
-	int timer = 60 * 10;
+//	int timer = 60 * 10;
 	int time_inmunidad = 0;
 
 public:
@@ -26,7 +26,7 @@ public:
 	void update();
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 	void aceleracion();
-	void respawn();
+//	void respawn();
 	void juego();
 	void setTextos();
 };

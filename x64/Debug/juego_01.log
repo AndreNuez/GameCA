@@ -1,18 +1,18 @@
 ﻿  GamePlay.cpp
-C:\Users\usuario\Documents\GitHub\tp_2_game\GamePlay.cpp(39,43): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\usuario\Documents\GitHub\tp_2_game\GamePlay.cpp(46,44): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\usuario\Documents\GitHub\tp_2_game\GamePlay.cpp(50,19): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\usuario\Documents\GitHub\tp_2_game\GamePlay.cpp(52,19): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\usuario\Documents\GitHub\tp_2_game\GamePlay.cpp(57,43): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(40,43): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(47,44): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(51,19): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(53,19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(58,43): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\usuario\Documents\GitHub\tp_2_game\GamePlay.cpp(59,42): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(59,42): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
   main.cpp
-  Generando código...
-  juego_01.vcxproj -> C:\Users\usuario\Documents\GitHub\tp_2_game\x64\Debug\juego_01.exe
+  Generating Code...
+  juego_01.vcxproj -> C:\Users\Gonzalo\Documents\GitHub\GameCA\x64\Debug\juego_01.exe
