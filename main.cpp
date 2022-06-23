@@ -39,6 +39,7 @@ int main()
         gp.aceleracion();
         gp.juego();
         gp.setTextos();
+        gp.pausa();
         gp.update();
 
         window.clear();

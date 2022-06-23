@@ -1,16 +1,16 @@
 ﻿  GamePlay.cpp
-C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(44,43): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(51,44): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(55,19): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(57,19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(62,43): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\usuario\Documents\GitHub\Game-CA\GamePlay.cpp(44,43): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\usuario\Documents\GitHub\Game-CA\GamePlay.cpp(51,44): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\usuario\Documents\GitHub\Game-CA\GamePlay.cpp(108,19): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\usuario\Documents\GitHub\Game-CA\GamePlay.cpp(120,23): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\usuario\Documents\GitHub\Game-CA\GamePlay.cpp(125,47): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
           with
           [
               T=float
           ]
-C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(63,42): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\usuario\Documents\GitHub\Game-CA\GamePlay.cpp(126,46): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
           with
           [
               T=float
           ]
-  juego_01.vcxproj -> C:\Users\Gonzalo\Documents\GitHub\GameCA\x64\Debug\juego_01.exe
+  juego_01.vcxproj -> C:\Users\usuario\Documents\GitHub\Game-CA\x64\Debug\juego_01.exe

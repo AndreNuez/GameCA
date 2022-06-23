@@ -52,7 +52,7 @@ void GamePlay::aceleracion()
         }
     }
 
-    int velocidad = repartidor.getAceleracion();
+    /*int velocidad = repartidor.getAceleracion();
     
     image.move(0, velocidad);
     if (image.getPosition().y > 0) {
@@ -60,7 +60,7 @@ void GamePlay::aceleracion()
     }
 
     carpincho.setVelocity(sf::Vector2f(0, velocidad));
-    camarada.setVelocity(sf::Vector2f(0, velocidad));
+    camarada.setVelocity(sf::Vector2f(0, velocidad));*/
 
 }
 
@@ -68,26 +68,26 @@ void GamePlay::juego()
 {
     if (tiempojugado > 0 && vidas > 0) {
 
-            if (repartidor.getInmunidad()) {
-                time_inmunidad++;
+        if (repartidor.getInmunidad()) {
+            time_inmunidad++;
+        }
+        if (repartidor.getInmunidad() && time_inmunidad == 60 * 5) {
+            repartidor.setInmunidad(false);
+        }
+        if (repartidor.isCollision(carpincho)) {
+            carpincho.respawn();
+            if (!repartidor.getInmunidad()) {
+                vidas--;
             }
-            if (repartidor.getInmunidad() && time_inmunidad == 60 * 5) {
-                repartidor.setInmunidad(false);
-            }
-            if (repartidor.isCollision(carpincho)) {
-                carpincho.respawn();
-                if (!repartidor.getInmunidad()) {
-                    vidas--;
-                }
-            }
-            if (repartidor.isCollision(camarada)) {
-                repartidor.setInmunidad(true);
-                time_inmunidad = 0;
-                camarada.respawn();
-                points += 100;
-            }
-            repartidor.setTransparencia(repartidor.getInmunidad());
-            tiempojugado--;
+        }
+        if (repartidor.isCollision(camarada)) {
+            repartidor.setInmunidad(true);
+            time_inmunidad = 0;
+            camarada.respawn();
+            points += 100;
+        }
+        repartidor.setTransparencia(repartidor.getInmunidad());
+        tiempojugado--;
     }
 }
 
@@ -101,4 +101,29 @@ void GamePlay::setTextos()
 
     game_over.setPosition(250, 300);
     game_over.setString("GAME OVER");
+}
+
+void GamePlay::pausa()
+{
+    int velocidad = repartidor.getAceleracion();
+ 
+
+    if (vidas == 0 || sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+    
+        image.move(0, 0);
+        carpincho.setVelocity(sf::Vector2f(0, 0));
+        camarada.setVelocity(sf::Vector2f(0, 0));
+    }
+
+    else {
+
+        image.move(0, velocidad);
+        if (image.getPosition().y > 0) {
+            image.setPosition(image.getPosition().x, -600);
+        }
+
+        carpincho.setVelocity(sf::Vector2f(0, velocidad));
+        camarada.setVelocity(sf::Vector2f(0, velocidad));
+  
+    }
 }
