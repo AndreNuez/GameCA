@@ -29,6 +29,10 @@ void GamePlay::draw(sf::RenderTarget& target, sf::RenderStates states) const
     target.draw(camarada, states);
     target.draw(text,states);
     target.draw(text_vida,states);
+
+    if (tiempojugado == 0 || vidas == 0) {
+        target.draw(game_over, states);
+    }
 }
 
 void GamePlay::aceleracion()
@@ -62,8 +66,7 @@ void GamePlay::aceleracion()
 
 void GamePlay::juego()
 {
-    if (tiempojugado > 0) {
-        if (vidas > 0) {
+    if (tiempojugado > 0 && vidas > 0) {
 
             if (repartidor.getInmunidad()) {
                 time_inmunidad++;
@@ -83,13 +86,8 @@ void GamePlay::juego()
                 camarada.respawn();
                 points += 100;
             }
-        }
-        repartidor.setTransparencia(repartidor.getInmunidad());
-        tiempojugado--;
-    }
-    else {
-        game_over.setPosition(250, 300);
-        game_over.setString("GAME OVER");
+            repartidor.setTransparencia(repartidor.getInmunidad());
+            tiempojugado--;
     }
 }
 
@@ -101,6 +99,6 @@ void GamePlay::setTextos()
     text_vida.setPosition(602, 20);
     text_vida.setString("VIDAS: " + std::to_string(vidas));
 
-    //game_over.setPosition(250, 300);
-    //game_over.setString("GAME OVER");
+    game_over.setPosition(250, 300);
+    game_over.setString("GAME OVER");
 }
