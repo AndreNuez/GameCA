@@ -6,7 +6,6 @@ Carpincho::Carpincho()
 	_textura.loadFromFile("carpincho.png"); // asigno imagen a textura
 	_sprite.setTexture(_textura); // asigno textura a personaje
 	_sprite.setOrigin(_sprite.getGlobalBounds().width / 2, _sprite.getGlobalBounds().height / 2);
-	_velocity = { 0,0 };
 }
 
 void Carpincho::update()
@@ -25,7 +24,7 @@ void Carpincho::draw(sf::RenderTarget& target, sf::RenderStates states) const
 void Carpincho::respawn()
 {
 	//Acá se tiene que llamar al objeto, no a la propiedad. La clase tiene que ser transformable.
-	_sprite.setPosition((std::rand() % 200) + 150 + _sprite.getLocalBounds().width, -100);
+	_sprite.setPosition((std::rand() % 200) + 150 + _sprite.getLocalBounds().width, -100 - (std::rand() % 300));
 }
 
 sf::FloatRect Carpincho::getBounds() const

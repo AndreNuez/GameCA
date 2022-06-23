@@ -4,6 +4,7 @@
 
 class Carpincho : public sf::Drawable, public Collisionable
 {
+protected:
 	sf::Sprite _sprite;
 	sf::Texture _textura;
 	sf::Vector2f _velocity;

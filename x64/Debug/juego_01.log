@@ -1,16 +1,5 @@
-﻿  GamePlay.cpp
-C:\Users\usuario\Documents\GitHub\Game-CA\GamePlay.cpp(44,43): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\usuario\Documents\GitHub\Game-CA\GamePlay.cpp(51,44): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\usuario\Documents\GitHub\Game-CA\GamePlay.cpp(108,19): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\usuario\Documents\GitHub\Game-CA\GamePlay.cpp(120,23): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\usuario\Documents\GitHub\Game-CA\GamePlay.cpp(125,47): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
-          with
-          [
-              T=float
-          ]
-C:\Users\usuario\Documents\GitHub\Game-CA\GamePlay.cpp(126,46): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
-          with
-          [
-              T=float
-          ]
+﻿  Carpincho.cpp
+C:\Users\usuario\Documents\GitHub\Game-CA\Carpincho.cpp(27,87): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+  CarpinchoCopado.cpp
+  Generando código...
   juego_01.vcxproj -> C:\Users\usuario\Documents\GitHub\Game-CA\x64\Debug\juego_01.exe

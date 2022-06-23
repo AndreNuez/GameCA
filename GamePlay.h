@@ -15,11 +15,11 @@ private:
 	sf::Font font;
 	sf::Text text, text_vida, game_over;
 
-	int vidas = 3;
-	int tiempojugado = 60*30;
-	int points = 0;
+	int vidas;
+	int tiempojugado;
+	int points;
 //	int timer = 60 * 10;
-	int time_inmunidad = 0;
+	int time_inmunidad;
 
 public:
 	GamePlay();
