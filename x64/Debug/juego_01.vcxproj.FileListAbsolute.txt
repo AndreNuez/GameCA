@@ -1,3 +1,1 @@
-C:\Users\Gonzalo\Desktop\Projects\GameCA-main\x64\Debug\juego_01.exe
 C:\Users\Gonzalo\Documents\GitHub\GameCA\x64\Debug\juego_01.exe
-C:\Users\usuario\Documents\GitHub\Game-CA\x64\Debug\juego_01.exe

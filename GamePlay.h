@@ -20,6 +20,7 @@ private:
 	int points;
 //	int timer = 60 * 10;
 	int time_inmunidad;
+	bool juego_pausa;
 
 public:
 	GamePlay();

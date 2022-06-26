@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <iostream>
 #include "GamePlay.h"
 
 GamePlay::GamePlay()
@@ -8,6 +9,7 @@ GamePlay::GamePlay()
     points = 0;
     //	int timer = 60 * 10;
     time_inmunidad = 0;
+    juego_pausa = false;
 
     texture_fondo.loadFromFile("ruta.png");
     image.setTexture(texture_fondo);
@@ -104,21 +106,21 @@ void GamePlay::setTextos()
 void GamePlay::pausa()
 {
     int velocidad = repartidor.getAceleracion();
-    bool pausa = false;
     
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
-        
-        if (!pausa) {
-            pausa = true;
-        }
-        
-        else if(pausa) {
-            pausa = false;
+        if (!juego_pausa) {
+            juego_pausa = true;
+        } 
+        else if (juego_pausa) {
+            juego_pausa = false;
         }
     }
-    
 
-    if (vidas == 0 || pausa || tiempojugado==0) {
+    std::cout << juego_pausa;
+    
+    //juego_pausa = sf::Keyboard::isKeyPressed(sf::Keyboard::Space);
+
+    if (vidas == 0 || juego_pausa || tiempojugado==0) {
     
         image.move(0, 0);
         carpincho.setVelocity(sf::Vector2f(0, 0));
