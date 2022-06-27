@@ -5,11 +5,12 @@
 GamePlay::GamePlay()
 {
     vidas = 3;
-    tiempojugado = 60 * 30;
+    tiempojugado = 60 * 10;
     points = 0;
     //	int timer = 60 * 10;
     time_inmunidad = 0;
     juego_pausa = false;
+    game_over = false;
 
     texture_fondo.loadFromFile("ruta.png");
     image.setTexture(texture_fondo);
@@ -18,7 +19,7 @@ GamePlay::GamePlay()
     text.setFont(font);
 
     text_vida.setFont(font);
-    game_over.setFont(font);
+    text_game_over.setFont(font);
 
     carpincho.respawn();
     camarada.respawn();
@@ -40,8 +41,12 @@ void GamePlay::draw(sf::RenderTarget& target, sf::RenderStates states) const
     target.draw(text,states);
     target.draw(text_vida,states);
 
-    if (vidas == 0) {
-        target.draw(game_over, states);
+    if (game_over) {
+        target.draw(text_game_over, states);
+    }
+    
+    if (juego_pausa) {
+        target.draw(text_pausa, states);
     }
 }
 
@@ -61,12 +66,21 @@ void GamePlay::aceleracion()
             repartidor.setAceleracion(-0.05);
         }
     }
-
 }
 
 void GamePlay::juego()
 {
-    if (tiempojugado > 0 && vidas > 0) {
+    if (!juego_pausa && !game_over) {
+
+        int velocidad = repartidor.getAceleracion();
+        image.move(0, velocidad);
+        
+        if (image.getPosition().y > 0) {
+            image.setPosition(image.getPosition().x, -600);
+        }
+        
+        carpincho.setVelocity(sf::Vector2f(0, velocidad));
+        camarada.setVelocity(sf::Vector2f(0, velocidad));
 
         if (repartidor.getInmunidad()) {
             time_inmunidad++;
@@ -89,6 +103,12 @@ void GamePlay::juego()
         repartidor.setTransparencia(repartidor.getInmunidad());
         tiempojugado--;
     }
+    else {
+        image.move(0, 0);
+        carpincho.setVelocity(sf::Vector2f(0, 0));
+        camarada.setVelocity(sf::Vector2f(0, 0));
+        repartidor.setAceleracion(0);
+    }
 }
 
 void GamePlay::setTextos()
@@ -99,14 +119,15 @@ void GamePlay::setTextos()
     text_vida.setPosition(602, 20);
     text_vida.setString("VIDAS: " + std::to_string(vidas));
 
-    game_over.setPosition(250, 300);
-    game_over.setString("GAME OVER");
+    text_game_over.setPosition(250, 300);
+    text_game_over.setString("GAME OVER");
+
+    text_pausa.setPosition(250, 300);
+    text_pausa.setString("PAUSA");
 }
 
 void GamePlay::pausa()
 {
-    int velocidad = repartidor.getAceleracion();
-    
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
         if (!juego_pausa) {
             juego_pausa = true;
@@ -117,25 +138,12 @@ void GamePlay::pausa()
     }
 
     std::cout << juego_pausa;
-    
-    //juego_pausa = sf::Keyboard::isKeyPressed(sf::Keyboard::Space);
+}
 
-    if (vidas == 0 || juego_pausa || tiempojugado==0) {
-    
-        image.move(0, 0);
-        carpincho.setVelocity(sf::Vector2f(0, 0));
-        camarada.setVelocity(sf::Vector2f(0, 0));
-    }
 
-    else {
-
-        image.move(0, velocidad);
-        if (image.getPosition().y > 0) {
-            image.setPosition(image.getPosition().x, -600);
-        }
-
-        carpincho.setVelocity(sf::Vector2f(0, velocidad));
-        camarada.setVelocity(sf::Vector2f(0, velocidad));
-  
+void GamePlay::gameOver()
+{
+    if (vidas < 1 || tiempojugado <= 0) {
+        game_over = true;
     }
 }

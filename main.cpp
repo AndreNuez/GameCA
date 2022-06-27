@@ -40,6 +40,7 @@ int main()
         gp.juego();
         gp.setTextos();
         gp.pausa();
+        gp.gameOver();
         gp.update();
 
         window.clear();
