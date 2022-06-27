@@ -13,7 +13,7 @@ private:
 	sf::Sprite image;
 	sf::Texture texture_fondo;
 	sf::Font font;
-	sf::Text text, text_vida, game_over;
+	sf::Text text, text_vida, text_game_over, text_pausa;
 
 	int vidas;
 	int tiempojugado;
@@ -21,15 +21,18 @@ private:
 //	int timer = 60 * 10;
 	int time_inmunidad;
 	bool juego_pausa;
+	bool game_over;
 
 public:
 	GamePlay();
 	void update();
+	void setTextos();
+
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 	void aceleracion();
 //	void respawn();
 	void juego();
-	void setTextos();
 	void pausa();
+	void gameOver();
 };
 
