@@ -1,5 +1,6 @@
 ﻿  Carpincho.cpp
 C:\Users\usuario\Documents\GitHub\Game-CA\Carpincho.cpp(27,87): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
   CarpinchoCopado.cpp
+C:\Users\usuario\Documents\GitHub\Game-CA\CarpinchoCopado.cpp(27,87): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
   Generando código...
   juego_01.vcxproj -> C:\Users\usuario\Documents\GitHub\Game-CA\x64\Debug\juego_01.exe

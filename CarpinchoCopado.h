@@ -4,17 +4,13 @@
 
 class CarpinchoCopado: public Carpincho
 {
-//private:
-	//sf::Sprite _sprite;
-	//sf::Texture _texture;
-	//sf::Vector2f _velocity;*/
+private:
+	sf::Sprite _sprite;
 
 public:
 	CarpinchoCopado();
-	//void update();
-	//void draw(sf::RenderTarget&, sf::RenderStates) const override;
-	//void respawn();
-	//sf::FloatRect getBounds() const override;
-	//void setVelocity(sf::Vector2f);
+	void update();
+	void draw(sf::RenderTarget&, sf::RenderStates) const override;
+	void respawn();
+	sf::FloatRect getBounds() const override;
 };
-
