@@ -16,10 +16,11 @@ GamePlay::GamePlay()
     image.setTexture(texture_fondo);
 
     font.loadFromFile("8bit.ttf");
+    
     text.setFont(font);
-
     text_vida.setFont(font);
     text_game_over.setFont(font);
+    text_pausa.setFont(font);
 
     carpincho.respawn();
     camarada.respawn();
@@ -27,9 +28,11 @@ GamePlay::GamePlay()
 
 void GamePlay::update()
 {
-    repartidor.update();
-    carpincho.update();
-    camarada.update();
+    if (!game_over) {
+        repartidor.update();
+        carpincho.update();
+        camarada.update();
+    }
 }
 
 void GamePlay::draw(sf::RenderTarget& target, sf::RenderStates states) const
@@ -137,7 +140,7 @@ void GamePlay::pausa()
         }
     }
 
-    std::cout << juego_pausa;
+    //std::cout << juego_pausa;
 }
 
 

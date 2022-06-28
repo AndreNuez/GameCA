@@ -8,7 +8,7 @@ CarpinchoCopado::CarpinchoCopado()
 	_sprite.setOrigin(_sprite.getGlobalBounds().width / 2, _sprite.getGlobalBounds().height / 2);
 }
 
-/*void CarpinchoCopado::update()
+void CarpinchoCopado::update()
 {
 	_sprite.move(_velocity);
 	if (_sprite.getPosition().y > 600) {
@@ -32,7 +32,4 @@ sf::FloatRect CarpinchoCopado::getBounds() const
 	return _sprite.getGlobalBounds();
 }
 
-/*void CarpinchoCopado::setVelocity(sf::Vector2f velocity)
-{
-	_velocity = velocity;
-}*/
+ 
