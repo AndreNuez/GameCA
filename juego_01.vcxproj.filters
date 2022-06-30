@@ -33,9 +33,6 @@
     <ClCompile Include="GamePlay.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Obstaculo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Personaje.h">
@@ -53,11 +50,5 @@
     <ClInclude Include="GamePlay.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Obstaculo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>
