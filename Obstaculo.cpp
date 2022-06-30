@@ -5,6 +5,7 @@ Obstaculo::Obstaculo()
 	_textura.loadFromFile("barrera.png"); // asigno imagen a textura
 	_sprite.setTexture(_textura); // asigno textura a personaje
 	_sprite.setOrigin(_sprite.getGlobalBounds().width / 2, _sprite.getGlobalBounds().height / 2);
+	_sprite.setPosition(300, -50);
 }
 
 void Obstaculo::draw(sf::RenderTarget& target, sf::RenderStates states) const
