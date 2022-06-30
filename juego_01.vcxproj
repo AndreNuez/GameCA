@@ -151,6 +151,7 @@
     <ClCompile Include="Collisionable.cpp" />
     <ClCompile Include="GamePlay.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Obstaculo.cpp" />
     <ClCompile Include="Personaje.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -158,7 +159,11 @@
     <ClInclude Include="CarpinchoCopado.h" />
     <ClInclude Include="Collisionable.h" />
     <ClInclude Include="GamePlay.h" />
+    <ClInclude Include="Obstaculo.h" />
     <ClInclude Include="Personaje.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

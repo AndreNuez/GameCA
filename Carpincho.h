@@ -1,20 +1,20 @@
 ﻿#pragma once
 #include <SFML/Graphics.hpp>
 #include "Collisionable.h"
+#include "Obstaculo.h"
 
-class Carpincho : public sf::Drawable, public Collisionable
+
+class Carpincho : public Obstaculo
 {
-protected:
+private:
 	sf::Sprite _sprite;
-	sf::Texture _textura;
-	sf::Vector2f _velocity;
 public:
 	Carpincho();
-	void update();
+	void updateRandom();
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
-	void respawn(); // Para que aparezca item en posici�n random.
+	void respawn(); 
+	void setSprite(int); //Borrar si no uso
 	sf::FloatRect getBounds() const override;
-	void setVelocity(sf::Vector2f);
 };
 
 

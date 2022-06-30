@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML\Graphics.hpp>
 #include "Personaje.h"
+#include "Obstaculo.h"
 #include "Carpincho.h"
 #include "CarpinchoCopado.h"
 
@@ -10,6 +11,7 @@ private:
 	Personaje repartidor;
 	Carpincho carpincho;
 	CarpinchoCopado camarada;
+	Obstaculo barrera;
 	sf::Sprite image;
 	sf::Texture texture_fondo;
 	sf::Font font;
@@ -22,6 +24,9 @@ private:
 	int time_inmunidad;
 	bool juego_pausa;
 	bool game_over;
+	bool llegada;
+	int vPosicionEjeX[4];
+
 
 public:
 	GamePlay();

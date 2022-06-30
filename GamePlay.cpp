@@ -5,12 +5,18 @@
 GamePlay::GamePlay()
 {
     vidas = 3;
-    tiempojugado = 60 * 10;
+    tiempojugado = 60 * 5;
     points = 0;
     //	int timer = 60 * 10;
     time_inmunidad = 0;
     juego_pausa = false;
     game_over = false;
+    llegada = false;
+
+    vPosicionEjeX[0] = 50;
+    vPosicionEjeX[1] = 50;
+    vPosicionEjeX[2] = 50;
+    vPosicionEjeX[3] = 50;
 
     texture_fondo.loadFromFile("ruta.png");
     image.setTexture(texture_fondo);
@@ -28,10 +34,13 @@ GamePlay::GamePlay()
 
 void GamePlay::update()
 {
-    if (!game_over) {
+    if (!game_over && !llegada) {
         repartidor.update();
-        carpincho.update();
+        carpincho.updateRandom();
         camarada.update();
+        if (tiempojugado <= 5) {
+            barrera.update();
+        }
     }
 }
 
@@ -43,6 +52,10 @@ void GamePlay::draw(sf::RenderTarget& target, sf::RenderStates states) const
     target.draw(camarada, states);
     target.draw(text,states);
     target.draw(text_vida,states);
+
+    if (tiempojugado < 5) {
+        target.draw(barrera, states);
+    }
 
     if (game_over) {
         target.draw(text_game_over, states);
@@ -73,7 +86,7 @@ void GamePlay::aceleracion()
 
 void GamePlay::juego()
 {
-    if (!juego_pausa && !game_over) {
+    if (!juego_pausa && !game_over && !llegada) {
 
         int velocidad = repartidor.getAceleracion();
         image.move(0, velocidad);
@@ -84,6 +97,7 @@ void GamePlay::juego()
         
         carpincho.setVelocity(sf::Vector2f(0, velocidad));
         camarada.setVelocity(sf::Vector2f(0, velocidad));
+        barrera.setVelocity(sf::Vector2f(0, velocidad));
 
         if (repartidor.getInmunidad()) {
             time_inmunidad++;
@@ -93,6 +107,7 @@ void GamePlay::juego()
         }
         if (repartidor.isCollision(carpincho)) {
             carpincho.respawn();
+            //carpincho.setSprite(vPosicionEjeX[(std::rand() % 4) - 1]);
             if (!repartidor.getInmunidad()) {
                 vidas--;
             }
@@ -104,6 +119,11 @@ void GamePlay::juego()
             points += 100;
         }
         repartidor.setTransparencia(repartidor.getInmunidad());
+        
+        if (repartidor.isCollision(barrera)) {
+            llegada = true;
+        }
+
         tiempojugado--;
     }
     else {
@@ -139,14 +159,13 @@ void GamePlay::pausa()
             juego_pausa = false;
         }
     }
-
     //std::cout << juego_pausa;
 }
 
 
 void GamePlay::gameOver()
 {
-    if (vidas < 1 || tiempojugado <= 0) {
+    if (vidas < 1) {
         game_over = true;
     }
 }
