@@ -1,2 +1,8 @@
-﻿  Obstaculo.cpp
+﻿  Carpincho.cpp
+C:\Users\Gonzalo\Documents\GitHub\GameCA\Carpincho.cpp(27,87): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Gonzalo\Documents\GitHub\GameCA\Carpincho.cpp(40,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Gonzalo\Documents\GitHub\GameCA\Carpincho.cpp(40,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  CarpinchoCopado.cpp
+C:\Users\Gonzalo\Documents\GitHub\GameCA\CarpinchoCopado.cpp(27,87): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
   juego_01.vcxproj -> C:\Users\Gonzalo\Documents\GitHub\GameCA\x64\Debug\juego_01.exe

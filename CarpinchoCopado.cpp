@@ -4,7 +4,7 @@
 CarpinchoCopado::CarpinchoCopado() 
 {
 	_textura.loadFromFile("carpinchocopado.png");
-	_sprite.setTexture(_textura);
+	_sprite.setTextureRect({ 0,0, (int)_textura.getSize().x, (int)_textura.getSize().y });
 	_sprite.setOrigin(_sprite.getGlobalBounds().width / 2, _sprite.getGlobalBounds().height / 2);
 }
 

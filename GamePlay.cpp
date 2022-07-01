@@ -5,7 +5,7 @@
 GamePlay::GamePlay()
 {
     vidas = 3;
-    tiempojugado = 60 * 5;
+    tiempojugado = 60 * 15;
     points = 0;
     //	int timer = 60 * 10;
     time_inmunidad = 0;
