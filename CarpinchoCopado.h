@@ -4,8 +4,6 @@
 
 class CarpinchoCopado: public Carpincho
 {
-private:
-	sf::Sprite _sprite;
 
 public:
 	CarpinchoCopado();

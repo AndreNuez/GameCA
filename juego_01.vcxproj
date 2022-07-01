@@ -152,6 +152,7 @@
     <ClCompile Include="GamePlay.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Personaje.cpp" />
+    <ClCompile Include="PopUp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Carpincho.h" />
@@ -159,7 +160,18 @@
     <ClInclude Include="Collisionable.h" />
     <ClInclude Include="GamePlay.h" />
     <ClInclude Include="Personaje.h" />
+    <ClInclude Include="PopUp.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
+<<<<<<< Updated upstream
+=======
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="juego_01.rc" />
+  </ItemGroup>
+>>>>>>> Stashed changes
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

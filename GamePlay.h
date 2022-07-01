@@ -3,6 +3,7 @@
 #include "Personaje.h"
 #include "Carpincho.h"
 #include "CarpinchoCopado.h"
+#include "PopUp.h"
 
 class GamePlay: public sf::Drawable
 {
@@ -10,6 +11,11 @@ private:
 	Personaje repartidor;
 	Carpincho carpincho;
 	CarpinchoCopado camarada;
+<<<<<<< Updated upstream
+=======
+	PopUp popup;
+	Obstaculo barrera;
+>>>>>>> Stashed changes
 	sf::Sprite image;
 	sf::Texture texture_fondo;
 	sf::Font font;
@@ -30,5 +36,12 @@ public:
 	void juego();
 	void setTextos();
 	void pausa();
+<<<<<<< Updated upstream
+=======
+	void gameOver();
+
+	int getVidas();
+	int getPuntos();
+>>>>>>> Stashed changes
 };
 

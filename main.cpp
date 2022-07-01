@@ -14,16 +14,7 @@ int main()
     sf::RenderWindow window(sf::VideoMode(800, 600), "Carpincho's Attack"); //Píxeles tamaño de ventana + nombre
     window.setFramerateLimit(60); //Forzamos a que corra a 60 frames per second
 
-    int timer = 60*10; //Tiempo que tarda en volver a aparecer
-
     GamePlay gp;
-
-
-    //Points
-    int vidas = 3;
-    int points = 0;
-
-
 
     //GameLoop
     while (window.isOpen())
@@ -46,10 +37,6 @@ int main()
 
         //Draw
         window.draw(gp);
-
-        if (timer == 0) {
-            //window.draw(camarada);
-        }
 
         //Display - Fli
         window.display();

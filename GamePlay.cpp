@@ -6,7 +6,6 @@ GamePlay::GamePlay()
     vidas = 3;
     tiempojugado = 60 * 30;
     points = 0;
-    //	int timer = 60 * 10;
     time_inmunidad = 0;
 
     texture_fondo.loadFromFile("ruta.png");
@@ -24,9 +23,24 @@ GamePlay::GamePlay()
 
 void GamePlay::update()
 {
+<<<<<<< Updated upstream
     repartidor.update();
     carpincho.update();
     camarada.update();
+=======
+    if (!game_over && !llegada) {
+        repartidor.update();
+        carpincho.updateRandom();
+        camarada.update();
+        if (tiempojugado <= 5) {
+            barrera.update();
+        }
+    }
+
+    if (llegada) {
+        popup.update();
+    }
+>>>>>>> Stashed changes
 }
 
 void GamePlay::draw(sf::RenderTarget& target, sf::RenderStates states) const
@@ -40,6 +54,10 @@ void GamePlay::draw(sf::RenderTarget& target, sf::RenderStates states) const
 
     if (vidas == 0) {
         target.draw(game_over, states);
+    }
+
+    if (llegada) {
+        target.draw(popup, states);
     }
 }
 
@@ -87,6 +105,21 @@ void GamePlay::juego()
         repartidor.setTransparencia(repartidor.getInmunidad());
         tiempojugado--;
     }
+<<<<<<< Updated upstream
+=======
+    else {
+        image.move(0, 0);
+        carpincho.setVelocity(sf::Vector2f(0, 0));
+        camarada.setVelocity(sf::Vector2f(0, 0));
+        repartidor.setAceleracion(0);
+    }
+
+    if (llegada) {
+        popup.setPuntos(points);
+        popup.setVidas(vidas);
+    }
+    
+>>>>>>> Stashed changes
 }
 
 void GamePlay::setTextos()
@@ -136,4 +169,14 @@ void GamePlay::pausa()
         camarada.setVelocity(sf::Vector2f(0, velocidad));
   
     }
+}
+
+int GamePlay::getVidas()
+{
+    return vidas;
+}
+
+int GamePlay::getPuntos()
+{
+    return points;
 }

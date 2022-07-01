@@ -1,6 +1,35 @@
 ﻿  Carpincho.cpp
 C:\Users\usuario\Documents\GitHub\Game-CA\Carpincho.cpp(27,87): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+<<<<<<< Updated upstream
   CarpinchoCopado.cpp
 C:\Users\usuario\Documents\GitHub\Game-CA\CarpinchoCopado.cpp(27,87): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+=======
+C:\Users\usuario\Documents\GitHub\Game-CA\Carpincho.cpp(40,35): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\usuario\Documents\GitHub\Game-CA\Carpincho.cpp(40,22): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+  CarpinchoCopado.cpp
+C:\Users\usuario\Documents\GitHub\Game-CA\CarpinchoCopado.cpp(27,87): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+  GamePlay.cpp
+C:\Users\usuario\Documents\GitHub\Game-CA\GamePlay.cpp(82,43): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\usuario\Documents\GitHub\Game-CA\GamePlay.cpp(89,44): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\usuario\Documents\GitHub\Game-CA\GamePlay.cpp(98,23): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\usuario\Documents\GitHub\Game-CA\GamePlay.cpp(99,23): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\usuario\Documents\GitHub\Game-CA\GamePlay.cpp(105,47): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+C:\Users\usuario\Documents\GitHub\Game-CA\GamePlay.cpp(106,46): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+C:\Users\usuario\Documents\GitHub\Game-CA\GamePlay.cpp(107,45): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+  PopUp.cpp
+  main.cpp
+>>>>>>> Stashed changes
   Generando código...
   juego_01.vcxproj -> C:\Users\usuario\Documents\GitHub\Game-CA\x64\Debug\juego_01.exe
