@@ -12,7 +12,10 @@ private:
 	Carpincho carpincho;
 	CarpinchoCopado camarada;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 	PopUp popup;
 	Obstaculo barrera;
 >>>>>>> Stashed changes
@@ -42,6 +45,9 @@ public:
 
 	int getVidas();
 	int getPuntos();
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 };
 

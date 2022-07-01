@@ -1,9 +1,12 @@
 ﻿  Carpincho.cpp
 C:\Users\usuario\Documents\GitHub\Game-CA\Carpincho.cpp(27,87): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   CarpinchoCopado.cpp
 C:\Users\usuario\Documents\GitHub\Game-CA\CarpinchoCopado.cpp(27,87): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
 =======
+=======
+>>>>>>> Stashed changes
 C:\Users\usuario\Documents\GitHub\Game-CA\Carpincho.cpp(40,35): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
 C:\Users\usuario\Documents\GitHub\Game-CA\Carpincho.cpp(40,22): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
   CarpinchoCopado.cpp
@@ -30,6 +33,9 @@ C:\Users\usuario\Documents\GitHub\Game-CA\GamePlay.cpp(107,45): warning C4244: '
           ]
   PopUp.cpp
   main.cpp
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   Generando código...
   juego_01.vcxproj -> C:\Users\usuario\Documents\GitHub\Game-CA\x64\Debug\juego_01.exe

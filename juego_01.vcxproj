@@ -171,6 +171,9 @@
   <ItemGroup>
     <ResourceCompile Include="juego_01.rc" />
   </ItemGroup>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -40,6 +40,9 @@ void GamePlay::update()
     if (llegada) {
         popup.update();
     }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }
 
@@ -54,6 +57,10 @@ void GamePlay::draw(sf::RenderTarget& target, sf::RenderStates states) const
 
     if (vidas == 0) {
         target.draw(game_over, states);
+    }
+
+    if (llegada) {
+        target.draw(popup, states);
     }
 
     if (llegada) {
@@ -119,6 +126,9 @@ void GamePlay::juego()
         popup.setVidas(vidas);
     }
     
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }
 
@@ -169,6 +179,16 @@ void GamePlay::pausa()
         camarada.setVelocity(sf::Vector2f(0, velocidad));
   
     }
+}
+
+int GamePlay::getVidas()
+{
+    return vidas;
+}
+
+int GamePlay::getPuntos()
+{
+    return points;
 }
 
 int GamePlay::getVidas()

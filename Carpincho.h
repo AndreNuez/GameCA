@@ -5,10 +5,14 @@
 class Carpincho : public sf::Drawable, public Collisionable
 {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 protected:
 	sf::Sprite _sprite;
 	sf::Texture _textura;
 	sf::Vector2f _velocity;
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes
